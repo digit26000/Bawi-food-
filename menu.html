@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bawi Food — Menu</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <div class="menu-header">
+    <a href="index.html" class="back-link">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Retour
+    </a>
+    <p class="menu-title">Notre menu</p>
+  </div>
+
+  <div class="tabs" id="tabs">
+    <button class="tab-btn active" data-tab="tacos">Tacos</button>
+    <button class="tab-btn" data-tab="burger">Burger</button>
+    <button class="tab-btn" data-tab="sandwich">Sandwich</button>
+    <button class="tab-btn" data-tab="assiette">Assiette</button>
+    <button class="tab-btn" data-tab="box">Box</button>
+    <button class="tab-btn" data-tab="panini">Panini</button>
+    <button class="tab-btn" data-tab="salade-dessert">Salade &amp; dessert</button>
+    <button class="tab-btn" data-tab="extra">Extra</button>
+  </div>
+
+  <div class="tab-panel active" id="tacos">
+    <p class="category-title">Tacos</p>
+    <div class="item"><span class="item-name">Nom du plat</span><span class="item-price">— €</span></div>
+    <div class="item"><span class="item-name">Nom du plat</span><span class="item-price">— €</span></div>
+  </div>
+
+  <div class="tab-panel" id="burger">
+    <p class="category-title">Burger</p>
+    <div class="item"><span class="item-name">Nom du plat</span><span class="item-price">— €</span></div>
+  </div>
+
+  <div class="tab-panel" id="sandwich">
+    <p class="category-title">Sandwich</p>
+    <div class="item"><span class="item-name">Nom du plat</span><span class="item-price">— €</span></div>
+  </div>
+
+  <div class="tab-panel" id="assiette">
+    <p class="category-title">Assiette</p>
+    <div class="item"><span class="item-name">Nom du plat</span><span class="item-price">— €</span></div>
+  </div>
+
+  <div class="tab-panel" id="box">
+    <p class="category-title">Box</p>
+    <div class="item"><span class="item-name">Nom du plat</span><span class="item-price">— €</span></div>
+  </div>
+
+  <div class="tab-panel" id="panini">
+    <p class="category-title">Panini</p>
+    <div class="item"><span class="item-name">Nom du plat</span><span class="item-price">— €</span></div>
+  </div>
+
+  <div class="tab-panel" id="salade-dessert">
+    <p class="category-title">Salade &amp; dessert</p>
+    <div class="item"><span class="item-name">Nom du plat</span><span class="item-price">— €</span></div>
+  </div>
+
+  <div class="tab-panel" id="extra">
+    <p class="category-title">Extra</p>
+    <div class="item"><span class="item-name">Nom du plat</span><span class="item-price">— €</span></div>
+  </div>
+
+</div>
+
+<script>
+  const buttons = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.tab-panel');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
