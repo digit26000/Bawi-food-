@@ -195,6 +195,13 @@ body {
   text-align: left;
 }
 
+.category-photo {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 0;
+  display: block;
+}
+
 .item {
   display: flex;
   justify-content: space-between;
