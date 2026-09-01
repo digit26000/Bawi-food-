@@ -203,6 +203,22 @@ body {
 }
 .category-photo:first-child { margin-top: 0; }
 
+/* --- liste des sauces --- */
+.sauces {
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
+  margin-top: 4px;
+  line-height: 1.8;
+}
+.sauces-label {
+  color: var(--yellow);
+  font-weight: 700;
+  margin-right: 4px;
+}
+.sauce-white { color: var(--white); }
+.sauce-yellow { color: var(--yellow); }
+
 .item {
   display: flex;
   justify-content: space-between;
