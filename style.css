@@ -154,14 +154,21 @@ body {
 /* --- onglets --- */
 .tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   width: 100%;
-  overflow-x: auto;
-  padding-bottom: 12px;
+  padding-bottom: 4px;
   margin-bottom: 20px;
-  scrollbar-width: none;
 }
-.tabs::-webkit-scrollbar { display: none; }
+@media (max-width: 520px) {
+  .tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scrollbar-width: none;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+}
 .tab-btn {
   flex: 0 0 auto;
   background: var(--bg-card);
