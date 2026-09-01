@@ -198,9 +198,10 @@ body {
 .category-photo {
   width: 100%;
   border-radius: 12px;
-  margin-bottom: 0;
+  margin-bottom: 12px;
   display: block;
 }
+.category-photo:first-child { margin-top: 0; }
 
 .item {
   display: flex;
